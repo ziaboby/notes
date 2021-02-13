@@ -1,3 +1,7 @@
+/**
+ * Utilities functions to detect current environment mode
+ */
+
 export const isDevelopmentMode = () =>
     !getEnvironmentMode() || getEnvironmentMode() === "development";
 

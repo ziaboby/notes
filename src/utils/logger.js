@@ -1,4 +1,8 @@
 
+/**
+ * Basic utilities functions to log most used level of information
+ */
+
 import { isProductionMode } from "./getEnvMode";
 
 const isProduction = isProductionMode();
