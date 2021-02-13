@@ -18,5 +18,6 @@ export const getSavedPersonalNotes = () => {
 }
 
 export const savePersonalNote = (objNewNote) => {
-    STORAGE.setItem(JSON.stringify(objNewNote))
+    const currentStoreState = getSavedPersonalNotes()
+    STORAGE.setItem(JSON.stringify({ ...currentStoreState, objNewNote }))
 }
