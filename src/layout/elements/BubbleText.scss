@@ -1,7 +1,8 @@
 @import '../sass-shared/settings';
 
 .bubble {
-    @include from-px-to-rem('min-width', 350px);
+    width: 100%;
+    box-sizing: border-box;
     @include from-px-to-rem('max-width', 730px);
     @include from-px-to-rem('line-height', 22px);
     position: relative;
@@ -43,5 +44,12 @@
         @include from-px-to-rem('border-left-width', 10px);
         border-top-color: $colorSolitude;
         left: 0;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .bubble {
+        width: auto;
+        @include from-px-to-rem('min-width', $minimum-width);
     }
 }

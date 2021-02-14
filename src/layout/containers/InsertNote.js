@@ -47,13 +47,15 @@ const InsertNote = ({ addNoteCb }) => {
                 onChangeCb={onChangeCb}
                 value={value}
             />
-            <Button
-                extraClassNamesSpaceSeparated={'insert-btn'}
-                onClickCb={onClickCb}
-                disabled={!value}
-            >
-                Publish
-            </Button>
+            <div className='insert-btn-container'>
+                <Button
+                    extraClassNamesSpaceSeparated={'insert-btn'}
+                    onClickCb={onClickCb}
+                    disabled={!value}
+                >
+                    Publish
+                </Button>
+            </div>
         </section>
     );
 };

@@ -2,25 +2,33 @@
 
 $paddingLR: 20px;
 $paddingTB: 10px;
+$height: 114px;
 
 .insert {
     background-color: $colorSolitude;
     box-sizing: border-box;
-    @include from-px-to-rem('height', 114px);
+    @include from-px-to-rem('height', $height + $paddingTB * 2);
     @include from-px-to-rem('padding-left', $paddingLR);
     @include from-px-to-rem('padding-right', $paddingLR);
     @include from-px-to-rem('padding-top', $paddingTB);
     @include from-px-to-rem('padding-bottom', $paddingTB);
-    position: relative;
-    > .insert-btn {
-        @include from-px-to-rem('width', 90px);
-        @include from-px-to-rem('height', 35px);
-        position: absolute;
-        @include from-px-to-rem('bottom', $paddingTB);
-        @include from-px-to-rem('right', $paddingLR);
-    }
-    > .insert-input {
-        @include from-px-to-rem('height', 48px);
-        @include from-px-to-rem('margin-bottom', 10px);
+}
+
+.insert-input {
+    @include from-px-to-rem('height', 48px);
+    @include from-px-to-rem('margin-bottom', 8px);
+}
+
+.insert-btn-container {
+    text-align: right;
+}
+.insert-btn {
+    @include from-px-to-rem('width', 90px);
+    @include from-px-to-rem('height', 35px);
+}
+
+@media (min-width: $maximum-width) {
+    .insert {
+        @include from-px-to-rem('height', $height);
     }
 }

@@ -1,9 +1,9 @@
 /*BREAKPOINTS*/
 
-$minimum-width: '375px';
-$tablet-width: '768px';
-$desktop-width: '1024px';
-$maximum-width: '1200px';
+$minimum-width: 375px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$maximum-width: 1200px;
 
 /*COLORS*/
 
@@ -50,4 +50,10 @@ $fontFamily: 'Univers LT Std', 'Open Sans', 'Roboto', 'Futura', 'Helvetica Neue'
 */
 @mixin from-px-to-rem($property, $pxValue) {
     #{$property}: ($pxValue / $pxRootFontSize) * 1rem;
+}
+
+@mixin text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

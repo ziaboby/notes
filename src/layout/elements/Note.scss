@@ -2,6 +2,8 @@
 
 .note {
     position: relative;
+    box-sizing: border-box;
+    width: 100%;
     @include from-px-to-rem('padding-top', 25px);
     @include from-px-to-rem('margin-top', 40px);
     &:first-child {
@@ -42,19 +44,19 @@
     background-clip: padding-box;
     .note--right & {
         background-color: $colorLinkWater1;
-        // > .bubble-tail {
-        //     @include from-px-to-rem('right', -10px);
-        // }
     }
     .note--left & {
         background-color: $colorSolitude;
-        // > .bubble-tail {
-        //     @include from-px-to-rem('left', -10px);
-        // }
     }
 }
 
 .note-scrollref {
     width: 1px;
     height: 1px;
+}
+
+@media (min-width: $tablet-width) {
+    .note {
+        width: auto;
+    }
 }
