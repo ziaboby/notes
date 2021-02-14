@@ -19,18 +19,25 @@ export const getNewId = aIds => Math.max(...aIds) + 1;
  * @return {array}
  */
 export const sortNotesByPubDateAsc = (aIds, objNotes) => {
-    const extractHours = time => time.substr(0, 2),
-        extractMinutes = time => time.substr(3, 2);
+    /**
+     * Get hours and minutes from a string by returing those respectively in the first and the second position of an array
+     * @param {string} time
+     * @example 11:00 or 1:00
+     * @return {array}
+     */
+    const extractHoursAndMinutes = time => time.split(':');
 
     return aIds
         .slice(0)
         .sort((a, b) => {
             const aDate = new Date(objNotes[a].pubDate),
-                bDate = new Date(objNotes[b].pubDate);
-            aDate.setHours(extractHours(objNotes[a].pubTime));
-            aDate.setMinutes(extractMinutes(objNotes[a].pubTime));
-            bDate.setHours(extractHours(objNotes[b].pubTime));
-            bDate.setMinutes(extractMinutes(objNotes[b].pubTime));
+                bDate = new Date(objNotes[b].pubDate),
+                [aHours, aMinutes] = extractHoursAndMinutes(objNotes[a].pubTime),
+                [bHours, bMinutes] = extractHoursAndMinutes(objNotes[b].pubTime);
+            aDate.setHours(aHours);
+            aDate.setMinutes(aMinutes);
+            bDate.setHours(bHours);
+            bDate.setMinutes(bMinutes);
 
             return aDate - bDate;
         })
