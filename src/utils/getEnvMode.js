@@ -3,10 +3,10 @@
  */
 
 export const isDevelopmentMode = () =>
-    !getEnvironmentMode() || getEnvironmentMode() === "development";
+    !getEnvironmentMode() || getEnvironmentMode() === 'development';
 
 export const isProductionMode = () =>
-    !getEnvironmentMode() || getEnvironmentMode() === "production";
+    !getEnvironmentMode() || getEnvironmentMode() === 'production';
 
 const getEnvironmentMode = () => (process.env || {}).NODE_ENV;
 
