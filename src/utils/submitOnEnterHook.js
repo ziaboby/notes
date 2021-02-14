@@ -17,8 +17,9 @@ export default submitCb => {
 
     useEffect(() => {
         ref.current.addEventListener('keydown', listenerCb);
+        const refCurrent = ref.current;
         return () => {
-            ref.current.removeEventListener('keydown', listenerCb);
+            refCurrent.removeEventListener('keydown', listenerCb);
         };
     }, []);
 
