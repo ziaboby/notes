@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import './Timestamp.scss';
 
 const Timestamp = ({ extraClassNamesSpaceSeparated, children }) => (
-    <div className={"timestamp " + (extraClassNamesSpaceSeparated || '')}>{children}</div>
-)
+    <div className={'timestamp ' + (extraClassNamesSpaceSeparated || '')}>{children}</div>
+);
 
-export default Timestamp
+export default Timestamp;

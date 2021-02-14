@@ -1,0 +1,7 @@
+@import '../sass-shared/settings';
+
+.timestamp {
+    @include from-px-to-rem('font-size', 12px);
+    @include from-px-to-rem('line-height', 16px);
+    color: $colorWaikawaGrey;
+}

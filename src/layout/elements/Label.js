@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import './Label.scss';
 
 const Label = ({ extraClassNamesSpaceSeparated, children }) => (
-    <div className={"label " + (extraClassNamesSpaceSeparated || '')}>{children}</div>
-)
+    <div className={'label ' + (extraClassNamesSpaceSeparated || '')}>{children}</div>
+);
 
-export default Label
+export default Label;
