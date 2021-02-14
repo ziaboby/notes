@@ -11,11 +11,15 @@
 .bubble-content {
     color: $colorBlack;
     overflow: hidden;
+    position: relative;
+    @include from-px-to-rem('max-height', 43px);
     @include from-px-to-rem('padding-top', 25px);
     @include from-px-to-rem('padding-bottom', 25px);
     @include from-px-to-rem('padding-left', 20px);
     @include from-px-to-rem('padding-right', 20px);
-    @include from-px-to-rem('max-height', 65px);
+    &.bubble-content--visible {
+        max-height: 100%;
+    }
     .note--right & {
         background-color: $colorLinkWater1;
         @include from-px-to-rem('margin-right', 10px);
@@ -23,6 +27,23 @@
     .note--left & {
         @include from-px-to-rem('margin-left', 10px);
         background-color: $colorSolitude;
+    }
+}
+
+.bubble-readmore {
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    @include from-px-to-rem('padding-top', 25px);
+    background: transparent linear-gradient(180deg, $colorWhiteAlpha0 0%, $colorWhite 100%) 0% 0%
+        no-repeat;
+    .bubble-content--visible & {
+        padding: 0;
+        @include from-px-to-rem('margin-top', 25px);
     }
 }
 
