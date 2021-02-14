@@ -19,13 +19,15 @@ const InsertNote = ({ addNoteCb }) => {
         currValue => {
             const tmpValue = typeof currValue === 'string' ? currValue : value;
             if (tmpValue) {
-                const stringDate = new Date().toJSON(),
-                    matches = stringDate.match(/(\d{4})-(\d{2})-(\d{2})\w(\d{2}):(\d{2})/),
+                const stringDate = new Date().toLocaleString(),
+                    matches = stringDate.match(
+                        /(\d{1,2})\/(\d{1,2})\/(\d{4})\D*(\d{1,2}):(\d{1,2})/
+                    ),
                     objNote = {
                         name: CURRENT_USER_NAME,
                         photoUrl: PICSUM_BASE_URL.replace('%ID%', CURRENT_USER_PICSUM_ID),
                         content: tmpValue,
-                        pubDate: `${matches[2]}/${matches[3]}/${matches[1]}`,
+                        pubDate: `${matches[2]}/${matches[1]}/${matches[3]}`,
                         pubTime: `${matches[4]}:${matches[5]}`,
                     };
 
