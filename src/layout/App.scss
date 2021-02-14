@@ -53,25 +53,25 @@ body {
     .notes-list {
         height: 45vh;
         overflow-y: scroll;
-    }
 
-    /*SCROLLBAR*/
+        /*SCROLLBAR*/
 
-    scrollbar-width: thin;
-    scrollbar-color: $colorWaikawaGrey $colorBlackPearlAlpha10;
+        scrollbar-width: thin;
+        scrollbar-color: $colorWaikawaGrey $colorBlackPearlAlpha10;
 
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
 
-    &::-webkit-scrollbar-track {
-        background: $colorBlackPearlAlpha10;
-        opacity: 0.1;
-    }
+        &::-webkit-scrollbar-track {
+            background: $colorBlackPearlAlpha10;
+            opacity: 0.1;
+        }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: $colorWaikawaGrey;
-        border-radius: 20px;
-        border: 3px solid $colorWaikawaGrey;
+        &::-webkit-scrollbar-thumb {
+            background-color: $colorWaikawaGrey;
+            border-radius: 20px;
+            border: 3px solid $colorWaikawaGrey;
+        }
     }
 }
