@@ -1,0 +1,10 @@
+$isAppMode: true; // components  are displayed together (true) or individually (false)
+
+@import '../sass-shared/reset';
+@import '../sass-shared/variables';
+
+@if $isAppMode == false {
+    body {
+        @include body-setting;
+    }
+}

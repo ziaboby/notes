@@ -1,0 +1,49 @@
+/*BREAKPOINTS*/
+
+$minimum-width: '375px';
+$tablet-width: '768px';
+$desktop-width: '1024px';
+$maximum-width: '1200px';
+
+/*COLORS*/
+
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorRuby: #d3135a;
+$colorLinkWater1: #c2cddd;
+$colorLinkWater2: #cacfd5;
+$colorSolitude: #eff2f7;
+
+/*FONTS*/
+
+$pxRootFontSize: 16px;
+$fontFamily: 'Univers LT Std', 'Open Sans', 'Roboto', 'Futura', 'Helvetica Neue', 'Arial',
+    sans-serif;
+
+@mixin font-default($isBold) {
+    font-family: $fontFamily;
+    @include from-px-to-rem('font-size', 16px);
+    font-style: normal;
+    font-weight: if($isBold, bold, normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+}
+
+@mixin font-weight($isBold) {
+    font-weight: if($isBold, 'bold', 'normal');
+}
+
+/*OTHER MIXINS*/
+
+@mixin body-setting {
+    @include font-default(false);
+    margin: 0;
+}
+
+/**
+* $pxValue must include px unit
+*/
+@mixin from-px-to-rem($property, $pxValue) {
+    #{$property}: ($pxValue / $pxRootFontSize) * 1rem;
+}

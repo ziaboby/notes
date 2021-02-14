@@ -1,0 +1,14 @@
+@import '../sass-shared/settings';
+
+.btn {
+    background-color: $colorRuby;
+    border-radius: 4px;
+    text-align: center;
+    color: $colorWhite;
+    line-height: 26px;
+    cursor: pointer;
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

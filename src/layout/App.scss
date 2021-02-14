@@ -1,0 +1,8 @@
+@import './sass-shared/settings';
+
+.app {
+    box-shadow: 0px 3px 6px $colorLinkWater1;
+    @include from-px-to-rem('max-width', 1200px);
+    @include from-px-to-rem('min-width', 375px);
+    width: 100%;
+}
