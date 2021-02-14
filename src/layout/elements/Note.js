@@ -18,8 +18,9 @@ const Notes = ({
     const ref = useRef();
 
     useEffect(() => {
+        // this code needs to be execute on each render to position it in the viewport in case old notes are loaded
         isTheLastInTheList && ref.current.scrollIntoView();
-    }, []);
+    });
 
     return (
         <div className={'note ' + (extraClassNamesSpaceSeparated || '')}>
