@@ -53,5 +53,5 @@ test('Textarea is cleared after submit', () => {
     userEvent.paste(textarea, sampleText);
     expect(textarea).toHaveTextContent(sampleText);
     userEvent.click(button);
-    expect(textarea).toHaveTextContent('');
+    expect(textarea).toBeEmptyDOMElement('');
 });
