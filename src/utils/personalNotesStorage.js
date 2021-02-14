@@ -23,9 +23,7 @@ const STORAGE = {
  */
 export const getSavedPersonalNotes = () => {
     const notesStoredInBrowserStorage = STORAGE.getItem();
-    return notesStoredInBrowserStorage
-        ? JSON.parse(notesStoredInBrowserStorage)
-        : {};
+    return notesStoredInBrowserStorage ? JSON.parse(notesStoredInBrowserStorage) : {};
 };
 
 /**

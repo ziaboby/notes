@@ -13,11 +13,5 @@ test('Sort objects in ascending order based on a published date', () => {
         5: { pubDate: '02-13-2021', pubTime: '02:00' },
     };
 
-    expect(sortNotesByPubDateAsc([1, 2, 3, 4, 5], sampleObj)).toEqual([
-        2,
-        5,
-        1,
-        4,
-        3,
-    ]);
+    expect(sortNotesByPubDateAsc([1, 2, 3, 4, 5], sampleObj)).toEqual([2, 5, 1, 4, 3]);
 });
