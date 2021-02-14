@@ -9,6 +9,19 @@ body {
     @include from-px-to-rem('max-width', 1200px);
     @include from-px-to-rem('min-width', 375px);
     width: 100%;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        @include from-px-to-rem('height', 90px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: transparent linear-gradient(0deg, $colorWhiteAlpha0 0%, $colorWhite 100%) 0% 0%
+            no-repeat;
+        z-index: 1;
+    }
 }
 
 #root {
@@ -22,24 +35,24 @@ body {
 .notes-list {
     height: 45vh;
     overflow-y: scroll;
+
+    /*SCROLLBAR*/
+
+    scrollbar-width: thin;
+    scrollbar-color: $colorWaikawaGrey $colorBlackPearlAlpha10;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $colorBlackPearlAlpha10;
+        opacity: 0.1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $colorWaikawaGrey; /* color of the scroll thumb */
+        border-radius: 20px;
+        border: 3px solid $colorWaikawaGrey; /* creates padding around scroll thumb */
+    }
 }
-
-/**scrollbar customization*/
-// .notes-list::-webkit-scrollbar {
-//   width: 12px;               /* width of the entire scrollbar */
-// }
-
-// .notes-list::-webkit-scrollbar-track {
-//   background: orange;        /* color of the tracking area */
-// }
-
-// .notes-list::-webkit-scrollbar-thumb {
-//   background-color: blue;    /* color of the scroll thumb */
-//   border-radius: 20px;       /* roundness of the scroll thumb */
-//   border: 3px solid orange;  /* creates padding around scroll thumb */
-// }
-
-// .notes-list {
-//   scrollbar-width: thin;
-//   scrollbar-color: blue orange;
-// }
