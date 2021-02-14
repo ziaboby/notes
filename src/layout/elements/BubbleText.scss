@@ -55,14 +55,14 @@
     border-style: solid;
     border-width: 0;
     border-color: transparent;
-    @include from-px-to-rem('border-top-width', 15px);
+    @include from-px-to-rem('border-top-width', 20px);
     .note--right & {
-        @include from-px-to-rem('border-right-width', 10px);
+        @include from-px-to-rem('border-right-width', 15px);
         border-top-color: $colorLinkWater1;
         right: 0;
     }
     .note--left & {
-        @include from-px-to-rem('border-left-width', 10px);
+        @include from-px-to-rem('border-left-width', 15px);
         border-top-color: $colorSolitude;
         left: 0;
     }
