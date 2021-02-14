@@ -14,7 +14,7 @@ test('Add new note empty state', () => {
                 name: 'test1',
                 photoUrl: 'fake_url',
                 content: 'Lorem ipsus',
-                pubDate: '02-13-2021',
+                pubDate: '02/13/2021',
                 pubTime: '12:00',
             },
             2: {
@@ -22,7 +22,7 @@ test('Add new note empty state', () => {
                 name: 'test2',
                 photoUrl: 'fake_url',
                 content: 'Lorem ipsus',
-                pubDate: '02-12-2021',
+                pubDate: '02/12/2021',
                 pubTime: '12:00',
             },
         },
@@ -33,7 +33,7 @@ test('Add new note empty state', () => {
         name: 'test3',
         photoUrl: 'fake_url',
         content: 'Lorem ipsus',
-        pubDate: '02-13-2021',
+        pubDate: '02/13/2021',
         pubTime: '15:00',
     };
 
@@ -56,7 +56,7 @@ test('Load others note from JSON', () => {
                 name: 'test1',
                 photoUrl: 'fake_url',
                 content: 'Lorem ipsus',
-                pubDate: '02-13-2021',
+                pubDate: '02/13/2021',
                 pubTime: '12:00',
             },
             2: {
@@ -64,7 +64,7 @@ test('Load others note from JSON', () => {
                 name: 'test2',
                 photoUrl: 'fake_url',
                 content: 'Lorem ipsus',
-                pubDate: '02-12-2021',
+                pubDate: '02/12/2021',
                 pubTime: '12:00',
             },
         },
@@ -77,7 +77,7 @@ test('Load others note from JSON', () => {
             name: 'test3',
             photoUrl: 'fake_url',
             content: 'Lorem ipsus',
-            pubDate: '02-13-2021',
+            pubDate: '02/13/2021',
             pubTime: '16:00',
         },
         {
@@ -85,7 +85,7 @@ test('Load others note from JSON', () => {
             name: 'test4',
             photoUrl: 'fake_url',
             content: 'Lorem ipsus',
-            pubDate: '02-13-2021',
+            pubDate: '02/13/2021',
             pubTime: '14:30',
         },
         {
@@ -93,7 +93,7 @@ test('Load others note from JSON', () => {
             name: 'test5',
             photoUrl: 'fake_url',
             content: 'Lorem ipsus',
-            pubDate: '02-13-2021',
+            pubDate: '02/13/2021',
             pubTime: '11:00',
         },
     ];
