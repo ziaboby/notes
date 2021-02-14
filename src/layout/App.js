@@ -49,7 +49,7 @@ const App = () => {
                         <Note
                             key={noteId}
                             extraClassNamesSpaceSeparated={
-                                isCurrentUser ? 'note-left' : 'note-right'
+                                isCurrentUser ? 'note--right' : 'note--left'
                             }
                             name={currentNote.name}
                             photoUrl={currentNote.photoUrl}
