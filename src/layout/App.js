@@ -6,7 +6,7 @@ import { fetchRequest } from '../utils/fetchRequest';
 import logger from '../utils/logger';
 import InsertNote from './containers/InsertNote';
 import './App.scss';
-import Notes from './elements/Note';
+import Note from './elements/Note';
 
 const App = () => {
     const [{ orderedNotesIds, notesById }, dispatch] = useReducer(Reducer, initialState);
@@ -40,12 +40,13 @@ const App = () => {
     return (
         <div className='app'>
             <section className='notes-list'>
-                {orderedNotesIds.map(noteId => {
+                {orderedNotesIds.map((noteId, index) => {
                     const currentNote = notesById[noteId],
-                        isCurrentUser = currentNote.name === CURRENT_USER_NAME;
+                        isCurrentUser = currentNote.name === CURRENT_USER_NAME,
+                        isTheLastInTheList = index === orderedNotesIds.length - 1;
 
                     return (
-                        <Notes
+                        <Note
                             key={noteId}
                             extraClassNamesSpaceSeparated={
                                 isCurrentUser ? 'note-left' : 'note-right'
@@ -55,6 +56,7 @@ const App = () => {
                             pubDate={currentNote.pubDate}
                             pubTime={currentNote.pubTime}
                             content={currentNote.content}
+                            isTheLastInTheList={isTheLastInTheList}
                         />
                     );
                 })}
