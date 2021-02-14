@@ -1,0 +1,47 @@
+@import '../sass-shared/settings';
+
+.bubble {
+    @include from-px-to-rem('min-width', 350px);
+    @include from-px-to-rem('max-width', 730px);
+    @include from-px-to-rem('line-height', 22px);
+    position: relative;
+}
+
+.bubble-content {
+    color: $colorBlack;
+    overflow: hidden;
+    @include from-px-to-rem('padding-top', 25px);
+    @include from-px-to-rem('padding-bottom', 25px);
+    @include from-px-to-rem('padding-left', 20px);
+    @include from-px-to-rem('padding-right', 20px);
+    @include from-px-to-rem('max-height', 65px);
+    .note--right & {
+        background-color: $colorLinkWater1;
+        @include from-px-to-rem('margin-right', 10px);
+    }
+    .note--left & {
+        @include from-px-to-rem('margin-left', 10px);
+        background-color: $colorSolitude;
+    }
+}
+
+.bubble-tail {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-style: solid;
+    border-width: 0;
+    border-color: transparent;
+    @include from-px-to-rem('border-top-width', 15px);
+    .note--right & {
+        @include from-px-to-rem('border-right-width', 10px);
+        border-top-color: $colorLinkWater1;
+        right: 0;
+    }
+    .note--left & {
+        @include from-px-to-rem('border-left-width', 10px);
+        border-top-color: $colorSolitude;
+        left: 0;
+    }
+}
