@@ -6,7 +6,7 @@ import logger from './logger';
  */
 const STORAGE = {
     getItem: () => {
-        localStorage.getItem(LOCAL_STORAGE_KEY);
+        return localStorage.getItem(LOCAL_STORAGE_KEY);
     },
     setItem: item => {
         try {
@@ -37,5 +37,5 @@ export const getSavedPersonalNotes = () => {
  */
 export const savePersonalNote = objNewNote => {
     const currentStoreState = getSavedPersonalNotes();
-    STORAGE.setItem(JSON.stringify({ ...currentStoreState, objNewNote }));
+    STORAGE.setItem(JSON.stringify({ ...currentStoreState, ...objNewNote }));
 };
