@@ -1,11 +1,6 @@
 import { ADD_NOTE, LOAD_NOTES_FROM_FETCH } from '../constants/actions';
 import Reducer from './notes';
 
-jest.mock('../utils/personalNotesStorage', () => ({
-    getSavedPersonalNotes: () => ({}),
-    savePersonalNote: item => !!item,
-}));
-
 test('Add new note empty state', () => {
     const SAMPLE_STATE = {
         notesById: {
