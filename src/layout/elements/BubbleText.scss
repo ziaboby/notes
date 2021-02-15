@@ -38,6 +38,7 @@
     right: 0;
     left: 0;
     text-align: center;
+    @include from-px-to-rem('font-size', 12px);
     @include from-px-to-rem('padding-top', 25px);
     background: transparent linear-gradient(180deg, $colorWhiteAlpha0 0%, $colorWhite 100%) 0% 0%
         no-repeat;
