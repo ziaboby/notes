@@ -43,6 +43,7 @@ $fontFamily: 'Univers LT Std', 'Open Sans', 'Roboto', 'Futura', 'Helvetica Neue'
 @mixin body-setting {
     @include font-default(false);
     margin: 0;
+    background-color: $colorWhite;
     @include from-px-to-rem('min-width', $minimum-width);
 }
 
