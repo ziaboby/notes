@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useReducer } from 'react';
-import { LOAD_NOTES_FROM_FETCH, ADD_NOTE } from '../constants/actions';
-import { CURRENT_USER_NAME, DATA_URL } from '../constants/common';
-import Reducer, { initialState } from '../reducers/notes';
-import { fetchRequest } from '../utils/fetchRequest';
-import logger from '../utils/logger';
-import InsertNote from './containers/InsertNote';
+import { LOAD_NOTES_FROM_FETCH, ADD_NOTE } from '../../constants/actions';
+import { CURRENT_USER_NAME, DATA_URL } from '../../constants/common';
+import Reducer, { initialState } from '../../reducers/notes';
+import { fetchRequest } from '../../utils/fetchRequest';
+import logger from '../../utils/logger';
+import InsertNote from './InsertNote';
+import Note from '../elements/Note';
+
 import './App.scss';
-import Note from './elements/Note';
 
 const App = () => {
     const [{ orderedNotesIds, notesById }, dispatch] = useReducer(Reducer, initialState);

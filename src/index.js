@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './layout/App';
+import App from './layout/containers/App';
 
 if (((window || {}).history || {}).scrollRestoration) {
     window.history.scrollRestoration = 'manual';
