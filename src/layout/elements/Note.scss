@@ -1,0 +1,62 @@
+@import '../sass-shared/settings';
+
+.note {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    @include from-px-to-rem('padding-top', 25px);
+    @include from-px-to-rem('margin-top', 40px);
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.note-avatar,
+.note-label,
+.note-timestamp {
+    position: absolute;
+    top: 0;
+}
+
+.note--left {
+    @include from-px-to-rem('padding-left', 65px);
+    > .note-avatar {
+        left: 0;
+    }
+    > .note-timestamp {
+        right: 0;
+    }
+}
+
+.note--right {
+    @include from-px-to-rem('padding-right', 58px);
+    > .note-avatar {
+        right: 0;
+        @include from-px-to-rem('top', 25px);
+    }
+    > .note-timestamp {
+        @include from-px-to-rem('right', 65px);
+    }
+}
+
+.bubble-content {
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    .note--right & {
+        background-color: $colorLinkWater1;
+    }
+    .note--left & {
+        background-color: $colorSolitude;
+    }
+}
+
+.note-scrollref {
+    width: 1px;
+    height: 1px;
+}
+
+@media (min-width: $tablet-width) {
+    .note {
+        width: auto;
+    }
+}
