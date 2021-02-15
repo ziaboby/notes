@@ -28,4 +28,4 @@ Format files under _src_ folder, based on Prettier config from the root of the p
 
 ## Live preview
 
-You can preview the build version of this project on [Github Pages](https://ziaboby.github.io/notes).
+You can preview the build version of this project on [Github Pages](https://ziaboby.github.io/notes) or fork a developer-based experience on [CodeSanbox](https://codesandbox.io/s/notes-app-rnc0w).
