@@ -1,8 +1,0 @@
-@import '../sass-shared/settings';
-
-.label {
-    @include from-px-to-rem('font-size', 14px);
-    @include from-px-to-rem('line-height', 18px);
-    color: $colorBlackPearl;
-    font-weight: bold;
-}

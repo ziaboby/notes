@@ -1,9 +1,0 @@
-@import '../sass-shared/settings';
-
-.avatar {
-    display: inline-block;
-    @include from-px-to-rem('width', 40px);
-    @include from-px-to-rem('height', 40px);
-    overflow: hidden;
-    border-radius: 50%;
-}
