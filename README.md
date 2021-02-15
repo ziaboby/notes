@@ -25,3 +25,7 @@ Builds the app for production to the `build` folder.
 ### `npm run prettier:format:src`
 
 Format files under _src_ folder, based on Prettier config from the root of the project tree.
+
+## Live preview
+
+You can preview the build version of this project on [Github Pages](https://ziaboby.github.io/notes).
