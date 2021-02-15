@@ -27,7 +27,7 @@ const App = () => {
     useEffect(() => {
         fetchRequest(DATA_URL)
             .then(result => {
-                logger.log(result);
+                // logger.log(result);
                 dispatch({
                     type: LOAD_NOTES_FROM_FETCH,
                     payload: {
