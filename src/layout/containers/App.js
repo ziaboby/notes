@@ -25,7 +25,7 @@ const App = () => {
     );
 
     useEffect(() => {
-        fetchRequest(process.env.PUBLIC_URL + DATA_URL, {
+        fetchRequest(((process.env || {}).PUBLIC_URL || '') + DATA_URL, {
             headers: {
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
