@@ -27,8 +27,8 @@ const InsertNote = ({ addNoteCb }) => {
                         name: CURRENT_USER_NAME,
                         photoUrl: PICSUM_BASE_URL.replace('%ID%', CURRENT_USER_PICSUM_ID),
                         content: tmpValue,
-                        pubDate: `${matches[2]}/${matches[1]}/${matches[3]}`,
-                        pubTime: `${matches[4]}:${matches[5]}`,
+                        pubDate: matches ? `${matches[2]}/${matches[1]}/${matches[3]}` : '',
+                        pubTime: matches ? `${matches[4]}:${matches[5]}` : '',
                     };
 
                 addNoteCb(objNote);
